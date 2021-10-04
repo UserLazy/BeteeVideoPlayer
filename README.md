@@ -13,7 +13,7 @@
 [![Bot Updates](https://img.shields.io/badge/VideoStreamBot-Updates%20Channel-green)](https://t.me/TGBotsProJect)
 [![Bot Support](https://img.shields.io/badge/VideoStreamBot-Support%20Group-blue)](https://t.me/ZauteBot)
 
-An Telegram Bot By [@ZauteKm](https://t.me/ZauteKm) To Stream Videos In Telegram Voice Chat Of Both Groups & Channels. Supports Live Streams, YouTube Videos & Telegram Media !!
+An Telegram Bot By [@Video](https://t.me/Viddddeossbbdj) To Stream Videos In Telegram Voice Chat Of Both Groups & Channels. Supports Live Streams, YouTube Videos & Telegram Media !!
 
 ## Special Features
 

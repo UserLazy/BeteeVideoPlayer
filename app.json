@@ -1,7 +1,7 @@
 {
     "name": "Telegram Video Stream Bot",
     "description": "An Telegram Bot By @ZauteKm To Stream Videos in Voice Chat",
-    "repository": "https://github.com/GunxProject/BateeVideo/tree/master",
+    "repository": "https://github.com/GunxProject/BateeVideoPlayer/tree/master",
     "logo": "https://telegra.ph/file/117de96dbfbfea2ce59a6.png",
     "stack": "container",
     "keywords": [

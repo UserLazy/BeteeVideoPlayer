@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (C) @ZauteKm
+# Copyright (C) @Galang109
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
@@ -37,7 +37,7 @@ async def main():
     if Config.IS_NONSTOP_STREAM:
         await start_stream()
     try:
-        await USER.join_chat("ZauteKm")
+        await USER.join_chat("Gun")
     except UserAlreadyParticipant:
         pass
     except Exception as e:

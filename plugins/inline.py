@@ -24,30 +24,30 @@ buttons = [
                 InlineKeyboardButton("🚨 Help & Commands 🚨", callback_data="help"),
             ],
             [
-                InlineKeyboardButton("👥 Support", url="https://t.me/zautebot"),
-                InlineKeyboardButton("Channel 📢", url="https://t.me/TGBotsProJect"),
+                InlineKeyboardButton("👥 Group Batak", url="https://t.me/Bataks"),
+                InlineKeyboardButton("Channel Batak 📢", url="https://t.me/Bataknese"),
             ],
             [
-                InlineKeyboardButton("🤖 Deploy your Own Bot 🤖", url="https://heroku.com/deploy?template=https://github.com/ZauteKm/VideoStreamBot/tree/master"),
+                InlineKeyboardButton("👦 OWNER 👦", url="https://t.me/Galang109"),
             ]
          ]
 
 def get_cmd(dur):
     if dur:
-        return "/play"
+        return "/platy"
     else:
-        return "/stream"
+        return "/streams"
 
 @Client.on_inline_query()
 async def search(client, query):
     answers = []
-    if query.query == "ZAUTE_KM":
+    if query.query == "Gun":
         answers.append(
             InlineQueryResultPhoto(
-                title="Deploy Own Video Stream Bot",
+                title="Selamat Bersenang - Senang",
                 thumb_url="https://telegra.ph/file/117de96dbfbfea2ce59a6.png",
                 photo_url="https://telegra.ph/file/117de96dbfbfea2ce59a6.png",
-                caption=f"{Config.REPLY_MESSAGE}\n\n<b>© Powered By : \n@ZauteKm | @ZauteBot 🧑‍🔧</b>",
+                caption=f"{Config.REPLY_MESSAGE}\n\n<b>© Powered By : \n@galang109 | @Bataks 🧑‍🔧</b>",
                 reply_markup=InlineKeyboardMarkup(buttons)
                 )
             )

@@ -173,7 +173,7 @@ async def show_current(client, m: Message):
     data=Config.DATA.get('FILE_DATA')
     if not data.get('dur', 0) or \
         data.get('dur') == 0:
-        title="▶️ <b>Streaming [Live Stream](https://t.me/ZauteKm) !</b>"
+        title="▶️ <b>Streaming [Live Stream](https://t.me/Bataks) !</b>"
     else:
         if Config.playlist:
             title=f"▶️ <b>{Config.playlist[0][1]}</b>"

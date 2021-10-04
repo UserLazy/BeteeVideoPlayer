@@ -151,12 +151,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton("Seach YouTube Videos", switch_inline_query_current_chat=""),
             ],
             [
-                InlineKeyboardButton("👥 Support", url="https://t.me/zautebot"),
-                InlineKeyboardButton("Channel 📢", url="https://t.me/tgbotsProject/156"),
+                InlineKeyboardButton("👥 Group Batak", url="https://t.me/Bataks"),
+                InlineKeyboardButton("Channel Batak 📢", url="https://t.me/Bataknese"),
             ],
             [
-                InlineKeyboardButton("🤖 Other Bots", url="https://t.me/BotzListBot"),
-                InlineKeyboardButton("Source Code 🔰", url="https://github.com/ZauteKm/VideoStreamBot/tree/master"),
+                InlineKeyboardButton("🤖 Other Bots", url="https://t.me/BateeMusicRobot"),
+                InlineKeyboardButton("OWNER 🔰", url="https://t.me/galang109"),
             ],
             [
                 InlineKeyboardButton("🏠 Home", callback_data="home"),
@@ -178,12 +178,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton("Seach YouTube Videos", switch_inline_query_current_chat=""),
             ],
             [
-                InlineKeyboardButton("👥 Support", url="https://t.me/zautebot"),
-                InlineKeyboardButton("Channel 📢", url="https://t.me/tgbotsProject/156"),
+                InlineKeyboardButton("👥 Group Batak", url="https://t.me/Bataks"),
+                InlineKeyboardButton("Channel Batak 📢", url="https://t.me/Bataknese"),
             ],
             [
-                InlineKeyboardButton("🤖 Other Bots", url="https://t.me/BotzListBot"),
-                InlineKeyboardButton("Source Code 🔰", url="https://github.com/ZauteKm/VideoStreamBot/tree/master"),
+                InlineKeyboardButton("🤖 Other Bots", url="https://t.me/BateeMusicRobot"),
+                InlineKeyboardButton("OWNER 🔰", url="https://t.me/Galang109"),
             ],
             [
                 InlineKeyboardButton("🚨 Help & Commands 🚨", callback_data="help"),

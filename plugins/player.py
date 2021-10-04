@@ -28,23 +28,23 @@ from helpers.utils import delete, download, get_admins, is_admin, get_buttons, g
 admin_filter=filters.create(is_admin)
 
 
-@Client.on_message(filters.command(["play", f"play@{Config.BOT_USERNAME}"]) & (filters.chat(Config.CHAT_ID) | filters.private | filters.chat(Config.LOG_GROUP)))
+@Client.on_message(filters.command(["platy", f"platy@{Config.BOT_USERNAME}"]) & (filters.chat(Config.CHAT_ID) | filters.private | filters.chat(Config.LOG_GROUP)))
 async def add_to_playlist(_, message: Message):
     if Config.ADMIN_ONLY == "True":
         admins = await get_admins(Config.CHAT_ID)
         if message.from_user.id not in admins:
-            k=await message.reply_sticker("CAADBQAD7gIAAq-1OVf2ov3Ge_ngpxYE")
+            k=await message.reply_sticker("CAADBQAD7gIAAq-1OVf2ov3Ge_ngpxYEI")
             await delete(k)
             return
     type=""
     yturl=""
     ysearch=""
     if message.reply_to_message and message.reply_to_message.video:
-        msg = await message.reply_text("⚡️")
+        msg = await message.reply_text("SABAR YA")
         type='video'
         m_video = message.reply_to_message.video       
     elif message.reply_to_message and message.reply_to_message.document:
-        msg = await message.reply_text("⚡️")
+        msg = await message.reply_text("TUNGGU YA")
         m_video = message.reply_to_message.document
         type='video'
         if not "video" in m_video.mime_type:
@@ -83,11 +83,11 @@ async def add_to_playlist(_, message: Message):
         await msg.edit("➕ **Media Added To Playlist !**")
     if type=="youtube" or type=="query":
         if type=="youtube":
-            msg = await message.reply_text("🔎")
+            msg = await message.reply_text("OK, ARE YOU READY ?")
             url=yturl
         elif type=="query":
             try:
-                msg = await message.reply_text("🔎")
+                msg = await message.reply_text("OK, READY ?")
                 ytquery=ysearch
                 results = YoutubeSearch(ytquery, max_results=1).to_dict()
                 url = f"https://youtube.com{results[0]['url_suffix']}"
@@ -123,7 +123,7 @@ async def add_to_playlist(_, message: Message):
         Config.playlist.append(data)
         await msg.edit(f"➕ **[{title}]({url}) Added To Playlist !**", disable_web_page_preview=True)
     if len(Config.playlist) == 1:
-        m_status = await msg.edit("⚡️")
+        m_status = await msg.edit("SABAR LOH")
         await download(Config.playlist[0], m_status)
         await m_status.delete()
         await m_status.reply_to_message.delete()
@@ -182,7 +182,7 @@ async def clear_play_list(client, m: Message):
     await start_stream()
 
 
-@Client.on_message(filters.command(["stream", f"stream@{Config.BOT_USERNAME}"]) & admin_filter & (filters.chat(Config.CHAT_ID) | filters.private | filters.chat(Config.LOG_GROUP)))
+@Client.on_message(filters.command(["streams", f"streams@{Config.BOT_USERNAME}"]) & admin_filter & (filters.chat(Config.CHAT_ID) | filters.private | filters.chat(Config.LOG_GROUP)))
 async def stream(client, m: Message):
     if m.reply_to_message:
         link=m.reply_to_message.text
@@ -212,24 +212,24 @@ async def stream(client, m: Message):
     await delete(s)
 
 
-admincmds=["join", "leave", "pause", "resume", "skip", "restart", "volume", "shuffle", "clrlist", "update", "replay", "getlogs", "stream", "mute", "unmute", "seek", f"mute@{Config.BOT_USERNAME}", f"unmute@{Config.BOT_USERNAME}", f"seek@{Config.BOT_USERNAME}", f"stream@{Config.BOT_USERNAME}", f"getlogs@{Config.BOT_USERNAME}", f"replay@{Config.BOT_USERNAME}", f"join@{Config.BOT_USERNAME}", f"leave@{Config.BOT_USERNAME}", f"pause@{Config.BOT_USERNAME}", f"resume@{Config.BOT_USERNAME}", f"skip@{Config.BOT_USERNAME}", f"restart@{Config.BOT_USERNAME}", f"volume@{Config.BOT_USERNAME}", f"shuffle@{Config.BOT_USERNAME}", f"clrlist@{Config.BOT_USERNAME}", f"update@{Config.BOT_USERNAME}"]
+admincmds=["join", "leave", "pause", "resume", "skip", "restart", "volume", "shuffle", "clrlist", "update", "replay", "getlogs", "streams", "mute", "unmute", "seek", f"mute@{Config.BOT_USERNAME}", f"unmute@{Config.BOT_USERNAME}", f"seek@{Config.BOT_USERNAME}", f"streams@{Config.BOT_USERNAME}", f"getlogs@{Config.BOT_USERNAME}", f"replay@{Config.BOT_USERNAME}", f"join@{Config.BOT_USERNAME}", f"leave@{Config.BOT_USERNAME}", f"pause@{Config.BOT_USERNAME}", f"resume@{Config.BOT_USERNAME}", f"skip@{Config.BOT_USERNAME}", f"restart@{Config.BOT_USERNAME}", f"volume@{Config.BOT_USERNAME}", f"shuffle@{Config.BOT_USERNAME}", f"clrlist@{Config.BOT_USERNAME}", f"update@{Config.BOT_USERNAME}"]
 
 @Client.on_message(filters.command(admincmds) & ~admin_filter & (filters.chat(Config.CHAT_ID) | filters.private | filters.chat(Config.LOG_GROUP)))
 async def notforu(_, m: Message):
-    k=await _.send_cached_media(chat_id=m.chat.id, file_id="CAACAgUAAxkBAAEB1GNhO2oHEh2OqrpucczIprmOIEKZtQACfwMAAjSe9DFG-UktB_TxOh4E", caption="**You Are Not Authorized !!**", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚡️ Join Here ⚡️', url='https://t.me/ZauteKm')]]), reply_to_message_id=m.message_id)
+    k=await _.send_cached_media(chat_id=m.chat.id, file_id="CAACAgUAAxkBAAEB1GNhO2oHEh2OqrpucczIprmOIEKZtQACfwMAAjSe9DFG-UktB_TxOh4EL", caption="**You Are Not Authorized !!**", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚡️ Join Here ⚡️', url='https://t.me/Bataks')]]), reply_to_message_id=m.message_id)
     await delete(k)
 
-allcmd = ["play", "current", "playlist", f"play@{Config.BOT_USERNAME}", f"current@{Config.BOT_USERNAME}", f"playlist@{Config.BOT_USERNAME}"] + admincmds
+allcmd = ["platy", "current", "playlist", f"platy@{Config.BOT_USERNAME}", f"current@{Config.BOT_USERNAME}", f"playlist@{Config.BOT_USERNAME}"] + admincmds
 
 @Client.on_message(filters.command(allcmd) & filters.group & ~(filters.chat(Config.CHAT_ID) | filters.private | filters.chat(Config.LOG_GROUP)))
 async def not_chat(_, m: Message):
     buttons = [
             [
-                InlineKeyboardButton("👥 Support", url="https://t.me/ZauteBot"),
-                InlineKeyboardButton("Channel 📢", url="https://t.me/TGBotsProJect"),
+                InlineKeyboardButton("👥 Group Batak", url="https://t.me/Bataks"),
+                InlineKeyboardButton("Channel Batak 📢", url="https://t.me/Bataknese"),
             ],
             [
-                InlineKeyboardButton("🤖 Make Your Own Bot 🤖", url="https://heroku.com/deploy?template=https://github.com/ZauteKm/VideoStreamBot/tree/master"),
+                InlineKeyboardButton("👦 OWNER 👦", url="https://t.me/galang109"),
             ]
          ]
-    await m.reply_text(text="**Sorry, You Can't Use This Bot In This Group 🤷‍♂️! But You Can Make Your Own Bot Like This From The [Source Code](https://github.com/ZauteKm/VideoStreamBot/tree/master) Below 😉!**", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+    await m.reply_text(text="**Sorry, You Can't Use This Bot In This Group 🤷‍♂️! But You Can Make Your Own Bot Like This From The [OWNER](https://t.me/Galang109) Below 😉!**", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)

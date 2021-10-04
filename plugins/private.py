@@ -22,13 +22,13 @@ from helpers.utils import delete, update, is_admin
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, InputMediaDocument
 
 
-HOME_TEXT = "👋🏻 **Hi [{}](tg://user?id={})**, \n\nI'm **Video Stream Bot**. \nI Can Stream Lives, YouTube Videos & Telegram Video Files On Voice Chat Of Telegram Channels & Groups 😉! \n\n**Made With ❤️ By @ZauteKm!** 🧑‍🔧"
+HOME_TEXT = "👋🏻 **Hi [{}](tg://user?id={})**, \n\nI'm **Batee Video Player**. \nI Can Stream Lives, YouTube Videos & Telegram Video Files On Voice Chat Of Telegram Channels & Groups 😉! \n\n**Made With ❤️ By @Galang109!** 🧑‍🔧"
 HELP_TEXT = """
 💡 --**Setting Up**--:
 
 \u2022 Add the bot and user account in your group with admin rights.
 \u2022 Start a voice chat in your group & restart the bot if not joined to vc.
-\u2022 Use /play [video name] or use /play as a reply to an video file or youtube link.
+\u2022 Use /platy [video name] or use /platy as a reply to an video file or youtube link.
 
 💡 --**Common Commands**--:
 
@@ -41,7 +41,7 @@ HELP_TEXT = """
 
 \u2022 `/seek` - seek the video
 \u2022 `/skip` - skip current video
-\u2022 `/stream` - start live stream
+\u2022 `/streams` - start live stream
 \u2022 `/pause` - pause playing video
 \u2022 `/resume` - resume playing video
 \u2022 `/mute` - mute the vc userbot
@@ -56,7 +56,7 @@ HELP_TEXT = """
 \u2022 `/getlogs` - get the ffmpeg & bot logs
 
 © **Powered By** : 
-**@ZauteKm | @TGBotsProJect** 🧑‍🔧
+**@Galang109 | @Bataks** 🧑‍🔧
 """
 
 admin_filter=filters.create(is_admin) 
@@ -68,12 +68,12 @@ async def start(client, message):
                 InlineKeyboardButton("Seach YouTube Videos", switch_inline_query_current_chat=""),
             ],
             [
-                InlineKeyboardButton("👥 Support", url="https://t.me/zautebot"),
-                InlineKeyboardButton("Channel 📢", url="https://t.me/tgbotsProject/156"),
+                InlineKeyboardButton("👥 Group Batak", url="https://t.me/Bataks"),
+                InlineKeyboardButton("Channel Batak 📢", url="https://t.me/Bataknese"),
             ],
             [
-                InlineKeyboardButton("🤖 Other Bots", url="https://t.me/BotzListBot"),
-                InlineKeyboardButton("Source Code 🔰", url="https://github.com/ZauteKm/VideoStreamBot/tree/master"),
+                InlineKeyboardButton("🤖 Other Bots", url="https://t.me/BatakMusicRobot"),
+                InlineKeyboardButton("OWNER 🔰", url="https://t.me/Galang109"),
             ],
             [
                 InlineKeyboardButton("🚨 Help & Commands 🚨", callback_data="help"),
@@ -91,12 +91,12 @@ async def show_help(client, message):
                 InlineKeyboardButton("Seach YouTube Videos", switch_inline_query_current_chat=""),
             ],
             [
-                InlineKeyboardButton("👥 Support", url="https://t.me/zautebot"),
-                InlineKeyboardButton("Channel 📢", url="https://t.me/tgbotsProject/156"),
+                InlineKeyboardButton("👥 Group Batak", url="https://t.me/Bataks"),
+                InlineKeyboardButton("Channel Batak 📢", url="https://t.me/Bataknese"),
             ],
             [
-                InlineKeyboardButton("🤖 Other Bots", url="https://t.me/BotzListBot"),
-                InlineKeyboardButton("Source Code 🔰", url="https://github.com/ZauteKm/VideoStreamBot/tree/master"),
+                InlineKeyboardButton("🤖 Other Bots", url="https://t.me/BatakMusicRobot"),
+                InlineKeyboardButton("OWNER 🔰", url="https://t.me/Galang109"),
             ],
             [
                 InlineKeyboardButton("🏠 Home", callback_data="home"),
